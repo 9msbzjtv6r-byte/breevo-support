@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Breevo – Checked against the IRS's own test returns</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#8F6206">
+<link rel="icon" href="img/icon.png">
+<link rel="apple-touch-icon" href="img/icon.png">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="top"><div class="in">
+  <a class="brand" href="./"><img src="img/icon.png" alt="">Breevo</a>
+  <nav><a href="how.html">How it works</a><a href="videos.html">Videos</a><a href="support.html">Support</a></nav>
+</div></header>
+
+<main>
+  <section class="hero small">
+    <div>
+      <p class="eyebrow">How Breevo checks its math</p>
+      <h1>Checked against the IRS's own test returns</h1>
+      <p class="meta">November 2026</p>
+    </div>
+    <img class="mascot" src="img/breevo-thumbsup.png" alt="Breevo giving a thumbs up">
+  </section>
+  <div class="doc">
+
+  <div class="callout">
+    <strong>In short:</strong> the IRS publishes sample Form 1040 returns for tax years 2025 and 2026. Breevo ran every
+    one that fits what Breevo prepares – 11 returns in all. Breevo's numbers match on every line compared, except
+    in four places where the IRS sample itself departs from that year's rules; there Breevo follows the rules
+    (the four places are listed below).
+  </div>
+
+  <h2>What the IRS publishes</h2>
+  <p>Each year the IRS posts test scenarios for software makers (its "Assurance Testing System", IRS Publication
+  1436): made-up taxpayers with their W-2s, 1099s and other forms. Of its 17 Form 1040 scenarios for tax years 2025
+  and 2026, 11 fall within what Breevo prepares. The others include farm income, household employees,
+  energy and business credits, which Breevo leaves to a tax professional.</p>
+
+  <h2>What Breevo found</h2>
+  <ul>
+    <li><strong>4 scenarios come with the IRS's own filled-in return.</strong> Breevo matches the IRS line for line –
+      income, deductions, tax, credits, payments and the refund – apart from three lines (items 1 to 3 below).</li>
+    <li><strong>7 scenarios give only the inputs.</strong> Each return was worked out by hand from the IRS
+      instructions and tax tables, and Breevo matches every line.</li>
+    <li><strong>Working through them made Breevo better.</strong> The comparison turned up nine small differences
+      (for example, rounding self-employment tax line by line, as the IRS does). Each was fixed as a general rule,
+      so every return benefits.</li>
+
+  </ul>
+
+  <h2>The returns</h2>
+  <div class="wrap">
+  <table>
+    <tr><th>Tax year</th><th>Scenario</th><th>What's in it</th><th>Result</th></tr>
+    <tr><td>2026</td><td>14</td><td>W-2, earned income credit, child tax credit</td><td class="ok">Matches every line (refund $9,348)</td></tr>
+    <tr><td>2025</td><td>12</td><td>W-2, self-employment income</td><td class="ok">Matches 8 lines; the business income deduction follows the rules (1 below)</td></tr>
+    <tr><td>2025</td><td>13</td><td>Married couple, W-2s, other credits</td><td class="ok">Matches 5 lines; uses the 2025 standard deduction (2 below)</td></tr>
+    <tr><td>2026</td><td>12</td><td>W-2, self-employment</td><td class="ok">Matches 8 lines; takes the business income deduction (3 below)</td></tr>
+    <tr><td>2025</td><td>2</td><td>Married couple, itemized deductions, a small business</td><td class="ok">Matches the hand-worked return</td></tr>
+    <tr><td>2026</td><td>2</td><td>Married couple, itemized deductions, a small business</td><td class="ok">Matches the hand-worked return</td></tr>
+    <tr><td>2025</td><td>5</td><td>Child care, education and earned income credits</td><td class="ok">Matches the hand-worked return</td></tr>
+    <tr><td>2026</td><td>4</td><td>Child care, education and earned income credits</td><td class="ok">Matches the hand-worked return</td></tr>
+    <tr><td>2026</td><td>5</td><td>W-2, refund split across accounts</td><td class="ok">Matches the hand-worked return</td></tr>
+    <tr><td>2026</td><td>6</td><td>W-2, gambling winnings, rental income</td><td class="ok">Matches the hand-worked return (4 below)</td></tr>
+    <tr><td>2025</td><td>8</td><td>Retirement income, dividends, Social Security</td><td class="ok">Matches the hand-worked return</td></tr>
+  </table>
+  </div>
+
+  <h2>Where Breevo follows the rules rather than the sample</h2>
+  <p>These samples are built mainly to test the e-file format, and in four places they don't apply that year's
+  rules. Breevo follows the rules:</p>
+  <ol>
+    <li><strong>2025 scenario 12:</strong> the qualified business income deduction is worked out on the business
+      profit after the deductible part of self-employment tax and self-employed health insurance, as the Form 8995
+      instructions say.</li>
+    <li><strong>2025 scenario 13:</strong> the married-filing-jointly standard deduction is $31,500, the amount on the
+      1040 itself after the 2025 law change (the sample uses the earlier $30,000).</li>
+    <li><strong>2026 scenario 12:</strong> the business made a profit, so Breevo takes the business income deduction
+      the rules give; the sample leaves it out.</li>
+    <li><strong>2026 scenario 6:</strong> Breevo also takes the overtime deduction and business income deduction the
+      rules allow, which the sample doesn't list.</li>
+  </ol>
+
+  <h2>What this means – and what it doesn't</h2>
+  <p>These checks show that Breevo's math follows the IRS's own examples. They are not an IRS approval or
+  certification of Breevo – the IRS doesn't certify tax apps this way. Breevo is a do-it-yourself tax preparation and
+  planning app: it shows the rule behind every number, and you review, sign and file your return. These returns are
+  part of Breevo's automated tests, which run on every change, so the checks keep holding as Breevo changes.</p>
+
+  <p>Source: IRS Publication 1436, <a href="https://www.irs.gov/pub/irs-pdf/p1436.pdf">Assurance Testing System
+  (ATS) Guidelines for Modernized e-File Individual Tax Returns</a>, and the IRS's tax year 2025 and 2026 Form 1040
+  ATS scenario pages. Every taxpayer in them is made up by the IRS.</p>
+  </div>
+</main>
+
+<footer class="site"><div class="in">
+  <span>© 2026 Breevo LLC. An independent app, with no ties to the IRS or any state tax agency.</span>
+  <span class="links"><a href="how.html">How it works</a><a href="videos.html">Videos</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="accuracy.html">Accuracy</a></span>
+</div></footer>
+
+</body>
+</html>
