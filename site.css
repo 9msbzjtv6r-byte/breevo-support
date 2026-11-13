@@ -41,7 +41,8 @@ img { max-width: 100%; }
 /* Top bar */
 .top {
   position: sticky; top: 0; z-index: 10;
-  background: var(--hero-2); color: var(--on-hero);   /* mustard, the same gold as theme-color */
+  /* The hero card's mustard gradient, dark to light, stopping where white text still reads clearly (4.5:1). */
+  background: linear-gradient(90deg, var(--hero-1) 0%, var(--hero-2) 55%, #9C6E0A 100%); color: var(--on-hero);
 }
 .top .in {
   max-width: 920px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px;
